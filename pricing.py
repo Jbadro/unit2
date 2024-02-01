@@ -7,6 +7,7 @@ class ProductPricingService:
     def calculate_final_price(self, product_id, user_id=None):
         # Get base price from data provider
         base_price = self.pricing_data_provider.get_base_price(product_id)
+        assert 
 
         # Calculate applicable taxes
         taxes = self.tax_calculator.calculate_taxes(base_price, user_id)
